@@ -7,30 +7,19 @@ function checkPasswordStrength(password) {
       3: "Strong",
       4: "Very Strong"
     };
-
     let score = 0;
-
-    // Check if the password contains at least 8 characters
     if (password.length >= 8) {
       score++;
     }
-
-    // Check if the password contains at least one uppercase letter
     if (/[A-Z]/.test(password)) {
       score++;
     }
-
-    // Check if the password contains at least one lowercase letter
     if (/[a-z]/.test(password)) {
       score++;
     }
-
-    // Check if the password contains at least one digit
     if (/\d/.test(password)) {
       score++;
     }
-
-    // Update the indicator text
     strengthIndicator.textContent = `Password Strength: ${strength[score]}`;
   }
 
