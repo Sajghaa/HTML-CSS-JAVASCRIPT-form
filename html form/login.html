@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unique Login and Signup Form</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <h2> Form</h2>
+    <form id="uniqueForm">
+      
+
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" oninput="checkPasswordStrength(this.value)" required>
+        <span class="password-toggle" onclick="togglePasswordVisibility()">👁️</span>
+        <div id="password-strength">Password Strength: </div>
+      </div>
+
+      <button type="submit">Login / Signup</button>
+
+      <a href="signup.html" class="register-link">I don't have an account</a>
+    </form>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
